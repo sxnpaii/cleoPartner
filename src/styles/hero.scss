@@ -1,0 +1,42 @@
+@use "Src";
+
+section.innerHero {
+    padding-top: 92px;
+    text-align: center;
+
+    h1 {
+        @include Src.headings();
+        margin-bottom: 23px;
+    }
+
+    p {
+        @include Src.defText();
+        margin-bottom: 36px;
+    }
+
+    .btn-gr {
+        @include Src.flexbox();
+        justify-content: center;
+        gap: 30px 60px;
+
+        button {
+            width: 259.47px;
+            height: 60.78px;
+            border-radius: 0;
+            @include Src.headings();
+            color: #000;
+
+            &:hover {
+                background: transparent;
+                color: Src.$wht;
+            }
+
+        }
+
+        a {
+            text-decoration: none;
+            @include Src.headings();
+        }
+
+    }
+}

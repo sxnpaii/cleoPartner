@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Regular'), local('RF-Dewi-Regular'),
+        url("../fonts/RFDewi-Regular.woff2") format('woff2'),
+        url("../fonts/RFDewi-Regular.woff")format('woff'),
+        url("../fonts/RFDewi-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// basic params 
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+%nulled {
+    padding: 0;
+    margin: 0;
+
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul {
+    @extend %nulled;
+}
+body {
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+}
+
+
+$primaryFont: 'Montserrat', sans-serif;
+$secondaryFont: 'RF Dewi';
+$wht: #fff;
+
+
+@mixin headings {
+    font-family: $primaryFont;
+    color: $wht;
+    font-weight: 700;
+}
+
+@mixin defText($t-Al: center, $font-W: 400) {
+    font-family: $secondaryFont;
+    font-weight: $font-W;
+    text-align: $t-Al;
+    color: #fff;
+}
+
+@mixin flexbox ($ai-c: center) {
+    display: flex;
+    align-items: $ai-c;
+    flex-wrap: wrap;
+}

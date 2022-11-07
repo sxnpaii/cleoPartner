@@ -1,0 +1,29 @@
+@use 'Src'; //basic sources file
+// components
+@use "header";
+@use "hero";
+@use "about";
+
+
+// header.jsx
+header {
+    position: fixed;
+    width: 100%;
+}
+
+// section Hero in App.js
+section.Hero {
+    min-height: 100vh;
+    @include Src.flexbox();
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.76) 0%, #00000088 100%), url('../img/heroBgIimage.svg') no-repeat center center / cover;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+// About section in App.js
+section.About {
+    background: url('../img/MapBg.svg') no-repeat center center /cover, rgba($color: #000000, $alpha: .6);
+    padding: 45px 0 117px 0;
+    // mix-blend-mode:difference;
+}

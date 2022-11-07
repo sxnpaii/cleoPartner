@@ -1,0 +1,118 @@
+@use 'Src';
+
+section.innerAbout {
+    @include Src.flexbox();
+    flex-direction: column;
+    // min-height: 1310px;
+    row-gap: 130px;
+    justify-content: space-between;
+
+    .phones {
+        width: 100%;
+        @include Src.flexbox();
+        justify-content: center;
+        gap: 30px 95px;
+
+        img {
+            max-width: 505px;
+            width: 100%;
+        }
+
+        .text {
+            max-width: 555px;
+
+            h2 {
+                @include Src.headings();
+                margin-bottom: 25px;
+
+            }
+
+            h4 {
+                @include Src.headings();
+                margin-bottom: 25px;
+            }
+
+
+            p {
+
+                @include Src.defText($t-Al: left);
+            }
+
+        }
+    }
+
+    .desktops {
+        width: 100%;
+        @include Src.flexbox();
+        justify-content: center;
+        gap: 30px 50px;
+        flex-wrap: wrap-reverse;
+
+        .text {
+            max-width: 550px;
+
+            h2 {
+                @include Src.headings();
+                margin-bottom: 36px;
+            }
+
+            ul {
+                li {
+                    list-style-image: url("../img/listGr.svg");
+                    list-style-position: inside;
+                    @include Src.defText($t-Al: left);
+
+                    &::marker {
+                        margin-right: 23px;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            .btn-gr {
+                @include Src.flexbox();
+                margin-top: 45px;
+                gap: 20px 40px;
+
+                button {
+                    width: 202.91px;
+                    height: 53px;
+                    @include Src.headings();
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+                    border-radius: 20px;
+                    border: 1px solid Src.$wht;
+                    transition: 330ms cubic-bezier(0.23, 1, 0.320, 1);
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+
+                a {
+                    @include Src.headings();
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .map {
+            position: relative;
+            max-width: 695px;
+            height: 415px;
+            background: url("../img/MacBook-Pro.svg") no-repeat top center / contain;
+            @include Src.flexbox($ai-c: flex-start);
+            justify-content: center;
+            
+            
+            img.mapImg {
+                transform: translateY(10px);
+                width: 82%;
+                max-width: 567px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
