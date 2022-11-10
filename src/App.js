@@ -6,9 +6,11 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import Comments from './components/Comments';
+
+
 function App() {
   return (
-
     <Suspense >
       <div className="App">
         {/* header */}
@@ -33,16 +35,25 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="services">
-          <div className="cpntainer">
+        <section className="Services">
+          <div className="container">
             <div className="row">
               <div className="col">
-                <Services></Services>
+                <Services />
               </div>
             </div>
           </div>
         </section>
-      </div>
+        <section className="Comments">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <Comments />
+              </div>  
+            </div>
+          </div>
+        </section>
+      </div> 
     </Suspense >
   );
 }

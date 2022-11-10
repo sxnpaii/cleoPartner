@@ -41,6 +41,7 @@ p,
 ul {
     @extend %nulled;
 }
+
 body {
     scroll-behavior: smooth;
 }
@@ -53,7 +54,8 @@ section {
 $primaryFont: 'Montserrat', sans-serif;
 $secondaryFont: 'RF Dewi';
 $wht: #fff;
-
+$scndGreen: #2BE3A0;
+$scndYellow: #FFBF44;
 
 @mixin headings {
     font-family: $primaryFont;

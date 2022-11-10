@@ -1,0 +1,93 @@
+@use "Src";
+
+
+section.innerComments {
+    h2.display-5 {
+        @include Src.headings();
+        text-align: center;
+        margin: 100px 0 55px 0;
+    }
+
+    .mySwiper {
+        width: 80%;
+
+        .swiper-slide {
+            min-height: 500px;
+            padding: 65px;
+            @include Src.flexbox($ai-c: flex-start);
+            flex-direction: row-reverse;
+            gap: 80px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
+            border-radius: 61px;
+
+            img {
+                width: 100%;
+                max-width: 308px;
+            }
+
+            .text {
+                max-width: 444px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 35px;
+
+                p.lorem {
+                    @include Src.defText($t-Al: left);
+                }
+
+                .userName {
+                    b{
+                        @include Src.headings();    
+                        font-size: 18px;
+                    }
+                    p{
+                        @include Src.defText();
+                        opacity: .4;
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev {
+            left: 21%;
+            right: auto;
+            top: auto;
+            bottom: 11%;
+            background-color: Src.$scndGreen;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+
+            &:after {
+                font-size: 24px;
+                color: black;
+            }
+        }
+
+        .swiper-button-next {
+            top: auto;
+            bottom: 11%;
+            left: 15%;
+            background-color: Src.$scndGreen;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+
+            &:after {
+                font-size: 24px;
+                color: black;
+            }
+        }
+
+        @media (max-width:1400px) {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+
+    }
+}

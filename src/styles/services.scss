@@ -1,0 +1,58 @@
+@use "Src";
+
+section.innerServices {
+    @include Src.flexbox();
+    justify-content: center;
+
+    h2.display-5 {
+        @include Src.headings();
+        margin: 66px 0 25px 0;
+    }
+
+    .sect {
+        @include Src.flexbox();
+        row-gap: 45px;
+        justify-content: space-between;
+        width: 75%;
+        min-height: 415px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(6px);
+        border-radius: 42px;
+        padding: 50px 40px;
+        @include Src.defText();
+        margin-bottom: 105px;
+
+        .skill {
+            max-width: 235px;
+            @include Src.flexbox();
+            flex-direction: column;
+
+            @media (max-width:992px) {
+margin: auto;
+            }
+
+            .icon {
+                @include Src.flexbox();
+                flex-direction: column;
+                justify-content: center;
+                width: 64px;
+                height: 64px;
+                border-radius: 12px;
+                margin-bottom: 18px;
+                background: Src.$scndYellow;
+
+                i {
+                    font-size: 33px;
+                }
+            }
+
+            .green {
+                background: Src.$scndGreen;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
