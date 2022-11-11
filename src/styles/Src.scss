@@ -57,9 +57,9 @@ $wht: #fff;
 $scndGreen: #2BE3A0;
 $scndYellow: #FFBF44;
 
-@mixin headings {
+@mixin headings($color: white) {
     font-family: $primaryFont;
-    color: $wht;
+    color: $color;
     font-weight: 700;
 }
 

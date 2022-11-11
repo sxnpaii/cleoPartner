@@ -1,0 +1,44 @@
+@use "Src";
+
+section.innerRequires {
+    h2.display-5 {
+        @include Src.headings();
+        text-align: center;
+        margin: 85px 0 42px 0;
+    }
+
+    .sect {
+        @include Src.flexbox();
+        gap: 120px;
+        margin-bottom: 30px;
+
+        img[alt='Car'] {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .list {
+            ul {
+                li {
+                    @include Src.defText($t-Al: left);
+                    list-style-position: inside;
+                    list-style-image: url('../img/listGr.svg');
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 44px;
+                    }
+
+                    &::marker {
+                        margin-left: 40px;
+                    }
+                }
+            }
+
+            .platforms {
+                @include Src.flexbox();
+                gap: 27px;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@use "Src";
+
+section.innerJoinUs {
+    @include Src.flexbox();
+    gap: 50px;
+    min-height: 170px;
+
+    .text {
+        max-width: 735px;
+
+        h2.display-6 {
+            @include Src.headings();
+            margin-bottom: 35px;
+
+        }
+
+        p {
+            @include Src.defText($t-Al: left);
+            opacity: .6;
+        }
+    }
+
+    form {
+        @include Src.flexbox();
+        flex-direction: column;
+        gap: 18px;
+
+        &>* {
+            width: 345px;
+            height: 50px;
+            @include Src.defText($t-Al: left);
+
+        }
+
+        input {
+            padding-left: 35px;
+        }
+
+        button {
+            @include Src.headings($color: black);
+            text-align: center;
+            border-radius: 0;
+            &:hover{
+                background: transparent;
+                color: white;
+            }
+
+        }
+
+    }
+}

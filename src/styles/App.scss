@@ -5,7 +5,8 @@
 @use "about";
 @use "services";
 @use "comments";
-
+@use "requires";
+@use "joinus";
 
 // header.jsx
 header {
@@ -40,4 +41,19 @@ section.Services {
 section.Comments {
     min-height: 850px;
     background: linear-gradient(180deg, rgba(64, 64, 64, 0.8) 0%, rgba(0, 0, 0, .3) 100%), url('../img/commentsImg.svg') no-repeat center center / cover;
+}
+
+// Requires section in App.js
+section.Requires {
+    background: url('../img/reguiresImg.svg') no-repeat center center / cover, rgba(0, 0, 0, .7);
+    min-height: 615px;
+
+}
+
+// Join section in App.js
+section.JoinUs {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, #000000d6 100%), url('../img/joinUs.svg') no-repeat center center / cover;
+    opacity: .8;
+    min-height: 350px;
+    @include Src.flexbox();
 }

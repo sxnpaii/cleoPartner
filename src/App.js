@@ -7,6 +7,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Comments from './components/Comments';
+import Requires from './components/Requires';
+import JoinUs from './components/JoinUs';
 
 
 function App() {
@@ -49,11 +51,29 @@ function App() {
             <div className="row">
               <div className="col">
                 <Comments />
-              </div>  
+              </div>
             </div>
           </div>
         </section>
-      </div> 
+        <section className="Requires">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <Requires />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="JoinUs">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <JoinUs />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </Suspense >
   );
 }

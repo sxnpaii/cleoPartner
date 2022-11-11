@@ -39,11 +39,10 @@ function Comments() {
                             <p>Водитель в сети Uber</p>
                         </div>
                     </div>
-                    
+
                 </SwiperSlide>
             </Swiper>
         </section>
     )
 }
-
 export default Comments;
