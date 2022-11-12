@@ -2,6 +2,8 @@
 
 
 section.innerComments {
+    margin-bottom: 50px;
+
     h2.display-5 {
         @include Src.headings();
         text-align: center;
@@ -21,6 +23,11 @@ section.innerComments {
             backdrop-filter: blur(2px);
             border-radius: 61px;
 
+            @media (max-width: 1400px) {
+               justify-content: center;
+                width: 100%;
+            }
+
             img {
                 width: 100%;
                 max-width: 308px;
@@ -33,16 +40,18 @@ section.innerComments {
                 align-items: flex-end;
                 gap: 35px;
 
+
                 p.lorem {
                     @include Src.defText($t-Al: left);
                 }
 
                 .userName {
-                    b{
-                        @include Src.headings();    
+                    b {
+                        @include Src.headings();
                         font-size: 18px;
                     }
-                    p{
+
+                    p {
                         @include Src.defText();
                         opacity: .4;
                     }
@@ -89,4 +98,4 @@ section.innerComments {
             }
         }
     }
-} 
+}

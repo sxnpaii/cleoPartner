@@ -1,0 +1,67 @@
+@use "Src";
+
+section.innerFooter {
+    padding: 60px 0;
+    @include Src.flexbox();
+    flex-direction: column;
+    gap: 70px;
+
+    .subhead {
+        width: 100%;
+        @include Src.flexbox();
+        justify-content: space-between;
+        gap: 30px;
+
+        @media (max-width:576px) {
+            justify-content: center;
+        }
+
+        ul {
+            width: 510px;
+            @include Src.flexbox();
+            justify-content: space-between;
+            gap: 10px;
+
+            @media (max-width:576px) {
+                width: 55%;
+                // justify-content: center;
+            }
+
+            li {
+                a {
+                    text-decoration: none;
+                    @include Src.defText();
+                }
+
+
+            }
+        }
+    }
+
+    .subfoot {
+        width: 100%;
+        @include Src.flexbox();
+        justify-content: space-between;
+
+        .copyr {
+            max-width: 230px;
+            @include Src.flexbox();
+            gap: 20px;
+            @include Src.defText();
+            opacity: .4;
+            a{
+                color: white;
+            }
+        }
+        .privacy {
+            width: 400px;
+            @include Src.flexbox();
+            justify-content: space-between;
+            p{
+                @include Src.defText();
+                opacity: .4;
+            }
+        }
+
+    }
+}

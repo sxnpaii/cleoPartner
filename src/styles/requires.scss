@@ -9,6 +9,8 @@ section.innerRequires {
 
     .sect {
         @include Src.flexbox();
+    
+    justify-content: center;
         gap: 120px;
         margin-bottom: 30px;
 
@@ -38,6 +40,10 @@ section.innerRequires {
             .platforms {
                 @include Src.flexbox();
                 gap: 27px;
+
+                @media (max-width:1400px) {
+                    justify-content: center;
+                }
             }
         }
     }

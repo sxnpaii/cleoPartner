@@ -1,0 +1,46 @@
+@use "Src";
+
+section.innerContacts {
+    @include Src.flexbox();
+    flex-direction: column;
+    row-gap: 70px;
+
+    .head {
+        width: 100%;
+        @include Src.flexbox();
+        justify-content: space-between;
+        row-gap: 70px;
+        column-gap: 30px;
+
+        h2.display-5 {
+            @include Src.headings();
+        }
+
+        p {
+            @include Src.defText();
+            opacity: .4;
+        }
+    }
+
+    .nums {
+        width: 100%;
+        @include Src.flexbox();
+        justify-content: space-between;
+        row-gap: 70px;
+        column-gap: 30px;
+        ul{
+            max-width: 210px;
+            @include Src.flexbox( $ai-c: flex-start);
+            flex-direction: column;
+            li{
+                @include Src.defText($font-W: 600);
+                font-size: 18px;
+                &:last-child{
+                    font-weight: 400;
+                    font-size: 16px;
+                    opacity: .4;
+                }
+            }
+        }
+    }
+}

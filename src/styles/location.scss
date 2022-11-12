@@ -1,0 +1,13 @@
+@use "Src";
+
+section.innerLocation{
+    h2.display-5{
+        @include Src.headings();
+        margin-top: 120px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    iframe{
+        width: 100%;
+    }
+}

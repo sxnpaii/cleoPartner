@@ -9,7 +9,9 @@ import Services from './components/Services';
 import Comments from './components/Comments';
 import Requires from './components/Requires';
 import JoinUs from './components/JoinUs';
-
+import Location from './components/Location';
+import Contacts from './components/Contacts';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -73,6 +75,34 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="Location">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <Location />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="Contacts">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <Contacts/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+        <div className="container">
+            <div className="row">
+              <div className="col">
+              <Footer/>
+              </div>
+            </div>
+          </div>
+          
+        </footer>
       </div>
     </Suspense >
   );
